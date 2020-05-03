@@ -83,17 +83,20 @@
         android:layout_below="@id/card"
 
 
-        android:layout_marginTop="498dp"
+        android:layout_marginTop="562dp"
+        android:background="#804fb3"
         android:text="Add Reimbursement"></Button>
 
     <Button
         android:layout_width="198dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/card"
-        android:layout_marginTop="498dp"
 
 
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="562dp"
         android:layout_toRightOf="@id/button1"
+        android:background="#804fb3"
         android:text="Submit Click"></Button>
 
 

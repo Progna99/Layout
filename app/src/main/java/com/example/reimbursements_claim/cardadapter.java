@@ -18,7 +18,9 @@ public class cardadapter extends RecyclerView.Adapter<cardadapter.ProductViewHol
     private Context mCtx2;
     private List<cardproduct> pdlist;
 
-    public cardadapter(MainActivity mainActivity, List<cardproduct> pdlist) {
+    public cardadapter(Context mCtx2, List<cardproduct> pdlist) {
+        this.mCtx2= mCtx2;
+        this.pdlist=pdlist;
     }
 
     @NonNull
@@ -26,7 +28,8 @@ public class cardadapter extends RecyclerView.Adapter<cardadapter.ProductViewHol
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater2 = LayoutInflater.from(mCtx2);
         View view2 = inflater2.inflate(R.layout.cardview, null);
-        return null;
+
+        return new ProductViewHolder(view2);
     }
 
     @Override
@@ -41,7 +44,7 @@ public class cardadapter extends RecyclerView.Adapter<cardadapter.ProductViewHol
 
     @Override
     public int getItemCount() {
-        return 1;
+        return pdlist.size();
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {
